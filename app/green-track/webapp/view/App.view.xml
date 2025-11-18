@@ -5,10 +5,9 @@
     xmlns="sap.m">
     <App id="app">
         <Page id="appPage" title="Homepage">
-            <Button text="Go to Dashboard" press="onNavToDashboard" />
-            <Button text="Go to GreenTrack" press="onNavToGreenTrack" />
 
-            <Text text="test"/>
+            <Text text="Willkommen bei Green-Track. Ihr Dienst zur einer nachhaltigeren Lieferkette und effizienteren Logistik."/>
+
     <tnt:NavigationList
 		id="navigationList"
 		width="320px"
@@ -16,8 +15,8 @@
 		<tnt:NavigationListItem text="Navigationleiste" key="rootItem1" icon="sap-icon://employee">
 			<tnt:NavigationListItem text="Go to Dashboard" press="onNavToDashboard" />
 			<tnt:NavigationListItem text="Fahrzeuge" press="onNavToFahrzeuge" />
-			<tnt:NavigationListItem text="Routen optimierung" id="subItemThree" key="subItem3" />
-			<tnt:NavigationListItem text="Sub Item 4" />
+			<tnt:NavigationListItem text="Routenoptimierung" press="onNavToRoutenoptimierung"/>
+			<tnt:NavigationListItem text="Kontakte" press="onNavToKontakte" />
 			<tnt:NavigationListItem text="Invisible Sub Item 5" visible="false" />
 			<tnt:NavigationListItem text="Invisible Sub Item 6" visible="false" />
 		</tnt:NavigationListItem>
@@ -31,7 +30,7 @@
 			<tnt:NavigationListItem text="Sub Item 4" />
 		</tnt:NavigationListItem>
 		<tnt:NavigationListItem text="Impressum" icon="sap-icon://building">
-			<tnt:NavigationListItem text="Kontakte" />
+			<tnt:NavigationListItem text="Kontakte" press="onNavToKontakte" />
 			<tnt:NavigationListItem text="Sub Item 2" />
 			<tnt:NavigationListItem text="Sub Item 3" />
 			<tnt:NavigationListItem text="Sub Item 4" />

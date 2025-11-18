@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="greentrack.controller.Routenoptimierung">
+    <Page showNavButton="true" navButtonPress="onNavBack" title="Routenoptimierung">
+        <!-- Add your UI controls here -->
+    </Page>
+</mvc:View>

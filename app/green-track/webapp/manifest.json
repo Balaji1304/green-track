@@ -113,6 +113,20 @@
           "target": [
             "TargetFahrzeuge"
           ]
+        },
+         {
+          "name": "RouteKontakte",
+          "pattern": "kontakte",
+          "target": [
+            "TargetKontakte"
+          ]
+        },
+        {
+          "name": "RouteRoutenoptimierung",
+          "pattern": "routenoptimierung",
+          "target": [
+            "TargetRoutenoptimierung"
+          ]
         }
       ],
       "targets": {
@@ -130,7 +144,17 @@
           "viewName": "Fahrzeuge",
           "viewId": "Fahrzeuge",
           "viewType": "XML"
-        }
+        },
+        "TargetRoutenoptimierung": {
+          "viewName": "Routenoptimierung",
+          "viewId": "Routenoptimierung",
+          "viewType": "XML"
+        },
+         "TargetKontakte": {
+          "viewName": "Kontakte",
+          "viewId": "Kontakte",
+          "viewType": "XML"
+        } 
       }
     },
     "rootView": {

@@ -17,6 +17,14 @@ sap.ui.define([
         onNavToFahrzeuge: function () {
             const oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("RouteFahrzeuge"); // Ensure the route name matches the manifest
+        },
+        onNavToRoutenoptimierung: function () {
+            const oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteRoutenoptimierung"); // Ensure the route name matches the manifest
+        },
+        onNavToKontakte: function () {
+            const oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteKontakte"); // Ensure the route name matches the manifest
         }
     });
 });
