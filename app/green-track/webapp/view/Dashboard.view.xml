@@ -1,5 +1,235 @@
-<mvc:View controllerName="greentrack.controller.Dashboard" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-    <Page id="dashboardPage" title="Dashboard" showNavButton="true" navButtonPress="onNavBack">
-        <!-- Add your UI controls here -->
+<mvc:View controllerName="greentrack.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:core="sap.ui.core"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+    displayBlock="true">
+
+    <Page title="GreenTrack Executive Hub" backgroundDesign="List" showNavButton="false">
+        
+        <f:GridContainer id="dashboardGrid" snapToRow="true" class="sapUiMediumMargin">
+            <f:layout>
+                <f:GridContainerSettings rowSize="80px" columnSize="5rem" gap="1rem" />
+            </f:layout>
+
+            <f:Card>
+                <f:layoutData>
+                    <f:GridContainerItemLayoutData rows="5" columns="5" />
+                </f:layoutData>
+                <f:header>
+                    <card:Header title="Nachhaltigkeits-Impact" subtitle="Echtzeit CO₂-Reduktion" iconSrc="sap-icon://world" />
+                </f:header>
+                <f:content>
+                    <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" justifyContent="SpaceBetween">
+                        <HBox justifyContent="SpaceBetween" alignItems="Start">
+                            <VBox>
+                                <Title text="Gesamteinsparung" level="H5" class="sapUiTinyMarginBottom"/>
+                                <ObjectNumber 
+                                    number="3.450" 
+                                    unit="kg" 
+                                    state="Success"
+                                    class="sapMObjectNumberLarge"
+                                    emphasized="true" />
+                                <ObjectStatus text="+12% vs. Vormonat" state="Success" icon="sap-icon://trend-up" class="sapUiTinyMarginTop"/>
+                            </VBox>
+                            <mc:RadialMicroChart size="M" percentage="78" valueColor="Good" class="sapUiTinyMarginTop"/>
+                        </HBox>
+
+                        <VBox class="sapUiMediumMarginTop">
+                            <HBox justifyContent="SpaceBetween">
+                                <Label text="Jahresziel (5t)" design="Bold"/>
+                                <Label text="78% Erreicht" design="Bold" class="sapUiTinyMarginBottom"/>
+                            </HBox>
+                            <ProgressIndicator 
+                                percentValue="78" 
+                                state="Success" 
+                                displayValue="3.450 kg" 
+                                showValue="true" 
+                                height="1.5rem"/> </VBox>
+                    </VBox>
+                </f:content>
+            </f:Card>
+
+            <f:Card>
+                <f:layoutData>
+                    <f:GridContainerItemLayoutData rows="5" columns="3" />
+                </f:layoutData>
+                <f:header>
+                    <card:Header title="Flotten-Status" subtitle="Verfügbarkeit" iconSrc="sap-icon://shipping-status" />
+                </f:header>
+                <f:content>
+                    <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" alignItems="Center" justifyContent="Center">
+                        
+                        <core:Icon src="sap-icon://shipping-status" size="3.5rem" color="#1C4C98" class="sapUiMediumMarginBottom"/>
+                        
+                        <Title text="35 / 45" titleStyle="H1" class="sapUiTinyMarginBottom"/>
+                        <Label text="Fahrzeuge im Einsatz" class="sapUiTinyMarginBottom"/>
+                        
+                        <ObjectStatus 
+                            text="Hohe Auslastung" 
+                            state="Indication06" 
+                            inverted="true" 
+                            class="sapUiMediumMarginTop" />
+                    </VBox>
+                </f:content>
+            </f:Card>
+
+            <f:Card>
+                <f:layoutData>
+                    <f:GridContainerItemLayoutData rows="5" columns="4" />
+                </f:layoutData>
+                <f:header>
+                    <card:Header title="Energiemix" subtitle="Antriebsarten" iconSrc="sap-icon://energy-saving-lightbulb"/>
+                </f:header>
+                <f:content>
+                    <FlexBox height="100%" width="100%" alignItems="Center" justifyContent="Center" class="sapUiSmallMarginBottom">
+                        <mc:InteractiveDonutChart selectionEnabled="true">
+                            <mc:segments>
+                                <mc:InteractiveDonutChartSegment label="Elektro" value="55.0" displayedValue="55%" color="Good"/>
+                                <mc:InteractiveDonutChartSegment label="Diesel" value="25.0" displayedValue="25%" color="Error"/>
+                                <mc:InteractiveDonutChartSegment label="H2" value="20.0" displayedValue="20%" color="Critical"/>
+                            </mc:segments>
+                        </mc:InteractiveDonutChart>
+                    </FlexBox>
+                </f:content>
+            </f:Card>
+
+            <f:Card>
+                <f:layoutData>
+                    <f:GridContainerItemLayoutData rows="8" columns="12" />
+                </f:layoutData>
+                <f:header>
+                    <card:Header title="Live-Tracking &amp; Performance" subtitle="Aktive Fahrer im Feld" iconSrc="sap-icon://group" />
+                </f:header>
+                <f:content>
+                    <Table 
+                        inset="false" 
+                        sticky="ColumnHeaders"
+                        growing="true" 
+                        class="sapUiContentPadding">
+                        <columns>
+                            <Column width="4rem" hAlign="Center"><Text text="" /></Column>
+                            <Column width="20%"><Text text="Fahrer" /></Column>
+                            <Column width="25%" minScreenWidth="Tablet" demandPopin="true"><Text text="Aktuelle Mission" /></Column>
+                            <Column width="15%" hAlign="Center"><Text text="Fahrzeug" /></Column>
+                            <Column width="20%" hAlign="Center"><Text text="Effizienz-Score" /></Column>
+                            <Column width="15%" hAlign="End"><Text text="Status" /></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="TM" displaySize="XS" backgroundColor="Accent1" />
+                                    <ObjectIdentifier title="Müller, Thomas" text="ID: 8821" />
+                                    <Text text="Berlin Mitte -> Alexanderplatz" />
+                                    <ObjectStatus icon="sap-icon://electric-vehicle" state="Success" tooltip="E-Van"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="95" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="92" color="Good"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Pünktlich" state="Success" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+                            
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="SL" displaySize="XS" backgroundColor="Accent2" />
+                                    <ObjectIdentifier title="Schmidt, Laura" text="ID: 9942" />
+                                    <Text text="Potsdam -> Werder (Havel)" />
+                                    <ObjectStatus icon="sap-icon://fridge" state="Success" tooltip="Lastenrad"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="80" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="85" color="Good"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Verzögert" state="Warning" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="WJ" displaySize="XS" backgroundColor="Accent3" />
+                                    <ObjectIdentifier title="Weber, Jan" text="ID: 1102" />
+                                    <Text text="Spandau -> Logistikzentrum" />
+                                    <ObjectStatus icon="sap-icon://cargo-train" state="Error" tooltip="Diesel"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="50" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="45" color="Error"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Lädt" state="Information" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="FE" displaySize="XS" backgroundColor="Accent8" />
+                                    <ObjectIdentifier title="Fischer, Emma" text="ID: 4401" />
+                                    <Text text="Flughafen BER -> City" />
+                                    <ObjectStatus icon="sap-icon://energy-saving-lightbulb" state="Indication08" tooltip="Wasserstoff"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="90" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="88" color="Good"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Unterwegs" state="None" inverted="false" />
+                                </cells>
+                            </ColumnListItem>
+
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="WS" displaySize="XS" backgroundColor="Accent4" />
+                                    <ObjectIdentifier title="Wagner, Sofia" text="ID: 7321" />
+                                    <Text text="Hamburg Hafen -> Speicherstadt" />
+                                    <ObjectStatus icon="sap-icon://electric-vehicle" state="Success" tooltip="E-Van"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="98" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="96" color="Good"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Verfrüht" state="Success" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="KB" displaySize="XS" backgroundColor="Accent5" />
+                                    <ObjectIdentifier title="Becker, Karl" text="ID: 2199" />
+                                    <Text text="München Zentrum -> Sendling" />
+                                    <ObjectStatus icon="sap-icon://cargo-train" state="Error" tooltip="Diesel"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="60" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="55" color="Critical"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Stau" state="Error" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+
+                            <ColumnListItem vAlign="Middle" type="Active">
+                                <cells>
+                                    <Avatar initials="MK" displaySize="XS" backgroundColor="Accent6" />
+                                    <ObjectIdentifier title="Klein, Max" text="ID: 5602" />
+                                    <Text text="Köln Hbf -> Messe" />
+                                    <ObjectStatus icon="sap-icon://fridge" state="Success" tooltip="Lastenrad"/>
+                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="92" showValue="true">
+                                        <mc:actual>
+                                            <mc:BulletMicroChartData value="90" color="Good"/>
+                                        </mc:actual>
+                                    </mc:BulletMicroChart>
+                                    <ObjectStatus text="Pause" state="Information" inverted="true" />
+                                </cells>
+                            </ColumnListItem>
+
+                        </items>
+                    </Table>
+                </f:content>
+            </f:Card>
+
+        </f:GridContainer>
     </Page>
 </mvc:View>
