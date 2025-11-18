@@ -1,41 +1,123 @@
-<mvc:View controllerName="greentrack.controller.App"
+<mvc:View 
+    controllerName="greentrack.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:tnt="sap.tnt"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <App id="app">
-        <Page id="appPage" title="Homepage">
 
-            <Text text="Willkommen bei Green-Track. Ihr Dienst zur einer nachhaltigeren Lieferkette und effizienteren Logistik."/>
+    <tnt:ToolPage id="toolPage">
 
-    <tnt:NavigationList
-		id="navigationList"
-		width="320px"
-		selectedKey="subItem3">
-		<tnt:NavigationListItem text="Navigationleiste" key="rootItem1" icon="sap-icon://employee">
-			<tnt:NavigationListItem text="Go to Dashboard" press="onNavToDashboard" />
-			<tnt:NavigationListItem text="Fahrzeuge" press="onNavToFahrzeuge" />
-			<tnt:NavigationListItem text="Routenoptimierung" press="onNavToRoutenoptimierung"/>
-			<tnt:NavigationListItem text="Kontakte" press="onNavToKontakte" />
-			<tnt:NavigationListItem text="Invisible Sub Item 5" visible="false" />
-			<tnt:NavigationListItem text="Invisible Sub Item 6" visible="false" />
-		</tnt:NavigationListItem>
-		<tnt:NavigationListItem
-			text="Invisible Section"
-			icon="sap-icon://employee"
-			visible="false">
-			<tnt:NavigationListItem text="Sub Item 1" />
-			<tnt:NavigationListItem text="Sub Item 2" />
-			<tnt:NavigationListItem text="Sub Item 3" />
-			<tnt:NavigationListItem text="Sub Item 4" />
-		</tnt:NavigationListItem>
-		<tnt:NavigationListItem text="Impressum" icon="sap-icon://building">
-			<tnt:NavigationListItem text="Kontakte" press="onNavToKontakte" />
-			<tnt:NavigationListItem text="Sub Item 2" />
-			<tnt:NavigationListItem text="Sub Item 3" />
-			<tnt:NavigationListItem text="Sub Item 4" />
-		</tnt:NavigationListItem>
-	</tnt:NavigationList>
-        </Page>
-    </App>
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress" tooltip="Menu auf/zuklappen"/>
+                <Image src="./path/to/logo.png" height="30px" densityAware="false" />
+                <Title level="H1" text="Green-Track Dashboard" wrapping="false">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="Disappear"/>
+                    </layoutData>
+                </Title>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://search" type="Transparent" tooltip="Suche" />
+                <Button icon="sap-icon://bell" type="Transparent" tooltip="Benachrichtigungen">
+                    <customData>
+                        <BadgeCustomData key="badge" value="3" visible="true"/>
+                    </customData>
+                </Button>
+                <Avatar initials="GT" displaySize="XS" press="onUserPress" backgroundColor="Accent6"/>
+            </tnt:ToolHeader>
+        </tnt:header>
+
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" selectedKey="dashboard">
+                <tnt:NavigationList>
+                    <tnt:NavigationListItem icon="sap-icon://bbyd-dashboard" text="Dashboard" key="dashboard" press="onNavToDashboard"/>
+                    
+                    <tnt:NavigationListItem text="Logistik" icon="sap-icon://shipping-status" expanded="true">
+                        <tnt:NavigationListItem text="Fahrzeuge" key="vehicles" press="onNavToFahrzeuge" />
+                        <tnt:NavigationListItem text="Routenoptimierung" key="routes" press="onNavToRoutenoptimierung"/>
+                        <tnt:NavigationListItem text="Aufträge" key="orders" />
+                    </tnt:NavigationListItem>
+
+                    <tnt:NavigationListItem text="Verwaltung" icon="sap-icon://building">
+                        <tnt:NavigationListItem text="Kontakte" key="contacts" press="onNavToKontakte" />
+                        <tnt:NavigationListItem text="Impressum" key="imprint" />
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+
+        <tnt:mainContents>
+            <App id="app">
+                <Page showHeader="false" backgroundDesign="List">
+                    <content>
+                        
+                        <VBox class="sapUiSmallMargin">
+                            <Title text="Willkommen zurück, Logistik-Team!" titleStyle="H2" class="sapUiTinyMarginBottom"/>
+                            <Text text="Hier ist der aktuelle Status Ihrer nachhaltigen Lieferkette." class="sapUiSmallMarginBottom" />
+                            
+                            <l:Grid defaultSpan="XL3 L4 M6 S12" class="sapUiSmallMarginTop">
+                                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="CO2 Einsparung" subheader="Diesen Monat" press="onPressTile">
+                                    <TileContent unit="kg" footer="Ziel erreicht">
+                                        <NumericContent value="450" icon="sap-icon://energy-saving-lightbulb" valueColor="Good" withMargin="false" />
+                                    </TileContent>
+                                </GenericTile>
+
+                                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Aktive Fahrzeuge" subheader="Auf der Straße" press="onPressTile">
+                                    <TileContent footer="Alle Systeme normal">
+                                        <NumericContent value="12" icon="sap-icon://shipping-status" valueColor="Neutral" withMargin="false" />
+                                    </TileContent>
+                                </GenericTile>
+
+                                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Routen Effizienz" subheader="Optimierungspotenzial" press="onPressTile">
+                                    <TileContent unit="%" footer="Handlungsbedarf">
+                                        <NumericContent value="88" icon="sap-icon://performance" valueColor="Critical" withMargin="false" />
+                                    </TileContent>
+                                </GenericTile>
+                            </l:Grid>
+                        </VBox>
+
+                        <Panel headerText="Aktuelle Warnmeldungen &amp; Status" class="sapUiSmallMargin" expandable="false">
+                            <Table id="alertsTable" growing="true" growingThreshold="5" inset="false">
+                                <columns>
+                                    <Column><Text text="Fahrzeug ID" /></Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Status" /></Column>
+                                    <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Standort" /></Column>
+                                    <Column hAlign="End"><Text text="Priorität" /></Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <ObjectIdentifier title="LKW-004" text="E-Transporter"/>
+                                            <ObjectStatus text="Verspätet" state="Error" />
+                                            <Text text="Berlin, A10" />
+                                            <ObjectStatus text="Hoch" state="Warning" icon="sap-icon://alert" />
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <ObjectIdentifier title="LKW-012" text="Diesel Hybrid"/>
+                                            <ObjectStatus text="Unterwegs" state="Success" />
+                                            <Text text="München, B471" />
+                                            <ObjectStatus text="Normal" state="Success" />
+                                        </cells>
+                                    </ColumnListItem>
+                                     <ColumnListItem>
+                                        <cells>
+                                            <ObjectIdentifier title="LKW-009" text="E-Transporter"/>
+                                            <ObjectStatus text="Laden" state="Information" />
+                                            <Text text="Depot Nord" />
+                                            <ObjectStatus text="Niedrig" state="None" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </Panel>
+
+                    </content>
+                </Page>
+            </App>
+        </tnt:mainContents>
+    </tnt:ToolPage>
 </mvc:View>
