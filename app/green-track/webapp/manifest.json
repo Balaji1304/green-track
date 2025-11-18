@@ -106,6 +106,13 @@
           "target": [
             "TargetDashboard"
           ]
+        },
+        {
+          "name": "RouteVehicles",
+          "pattern": "vehicles",
+          "target": [
+            "TargetVehicles"
+          ]
         }
       ],
       "targets": {
@@ -117,6 +124,11 @@
         "TargetDashboard": {
           "viewName": "Dashboard",
           "viewId": "Dashboard",
+          "viewType": "XML"
+        },
+        "TargetVehicles": {
+          "viewName": "Vehicles",
+          "viewId": "Vehicles",
           "viewType": "XML"
         }
       }

@@ -7,7 +7,7 @@
         <Page id="appPage" title="Homepage">
             <Button text="Go to Dashboard" press="onNavToDashboard" />
             <Button text="Go to GreenTrack" press="onNavToGreenTrack" />
-
+			<Button text="Go to Vehicles" press="onNavToVehicles" />		
             <Text text="test"/>
     <tnt:NavigationList
 		id="navigationList"
