@@ -9,7 +9,7 @@
 		width="320px"
 		selectedKey="subItem3">
 		<tnt:NavigationListItem text="Item 1" key="rootItem1" icon="sap-icon://employee">
-			<tnt:NavigationListItem text="Go to Dashboard" press="onNavToDashboard" />
+			<!-- <tnt:NavigationListItem text="Go to Dashboard" press="onNavToDashboard" /> -->
 			<tnt:NavigationListItem text="Fahrzeuge" />
 			<tnt:NavigationListItem text="Routen optimierung" id="subItemThree" key="subItem3" />
 			<tnt:NavigationListItem text="Sub Item 4" />

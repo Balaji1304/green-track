@@ -121,7 +121,7 @@
             "TargetFahrzeuge"
           ]
         },
-         {
+        {
           "name": "RouteKontakte",
           "pattern": "kontakte",
           "target": [
@@ -151,7 +151,6 @@
           "viewName": "Vehicles",
           "viewId": "Vehicles",
           "viewType": "XML"
-        }
         },
         "TargetFahrzeuge": {
           "viewName": "Fahrzeuge",
@@ -163,11 +162,11 @@
           "viewId": "Routenoptimierung",
           "viewType": "XML"
         },
-         "TargetKontakte": {
+        "TargetKontakte": {
           "viewName": "Kontakte",
           "viewId": "Kontakte",
           "viewType": "XML"
-        } 
+        }
       }
     },
     "rootView": {
