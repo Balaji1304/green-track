@@ -5,660 +5,241 @@
     xmlns:card="sap.f.cards"
     xmlns:core="sap.ui.core"
     xmlns:mc="sap.suite.ui.microchart"
-    xmlns:tnt="sap.tnt"
     xmlns:layout="sap.ui.layout"
     displayBlock="true">
 
-    <Page title="GreenTrack Executive Hub" backgroundDesign="List" showNavButton="false">
-        <Table id="Bestellungen">
-            <headerToolbar>
-                <OverflowToolbar>
-                    <content>
-                        <Title text="Bestellungen" level="H2"/>
-                    </content>
-                </OverflowToolbar>
-            </headerToolbar>
-            <infoToolbar>
-                <OverflowToolbar>
-                    <Label text="Auflistung aller Bestellungen"/>
-                </OverflowToolbar>
-            </infoToolbar>
-            <columns>
-                <Column width="12em">
-                    <Text text="Bestellnummer" />
-                </Column>
-                <Column minScreenWidth="Tablet" demandPopin="true">
-                    <Text text="Addresse" />
-                </Column>
-                <Column hAlign="End">
-                    <Text text="Erledigt" />
-                </Column>
-            </columns>
-            <items>
-                <ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="1"/>
-        <Text text="Industriestraße 12, 44801 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="2"/>
-        <Text text="Westring 303, 44629 Herne" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="3"/>
-        <Text text="Dortmunder Straße 88, 44575 Castrop-Rauxel" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="4"/>
-        <Text text="Alleestraße 19, 44793 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="5"/>
-        <Text text="Berliner Platz 5, 45127 Essen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="6"/>
-        <Text text="Heinrich-Hertz-Straße 4, 44227 Dortmund" />
-        <CheckBox />
-        </cells>
-        </ColumnListItem>
-
-        <ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="7"/>
-        <Text text="Hauptstraße 22, 44787 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="8"/>
-        <Text text="Nordring 14, 45894 Gelsenkirchen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="9"/>
-        <Text text="Beethovenstraße 70, 44145 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="10"/>
-        <Text text="Kaiserstraße 130, 44135 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="11"/>
-        <Text text="Hofstraße 9, 45468 Mülheim an der Ruhr" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="12"/>
-        <Text text="Friedrichstraße 41, 58089 Hagen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="13"/>
-        <Text text="Bahnstraße 5, 46045 Oberhausen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="14"/>
-        <Text text="Ruhrstraße 11, 58452 Witten" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="15"/>
-        <Text text="Goethestraße 18, 59423 Unna" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="16"/>
-        <Text text="Hansemannstraße 3, 44579 Castrop-Rauxel" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="17"/>
-        <Text text="Paulstraße 20, 44623 Herne" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="18"/>
-        <Text text="Emscherstraße 33, 45886 Gelsenkirchen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="19"/>
-        <Text text="Bergstraße 25, 45663 Recklinghausen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="20"/>
-        <Text text="Marktstraße 44, 42551 Velbert" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<!-- 21–30 -->
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="21"/>
-        <Text text="Platanenweg 7, 58762 Altena" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="22"/>
-        <Text text="Steinweg 9, 59379 Selm" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="23"/>
-        <Text text="Parkallee 12, 44225 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="24"/>
-        <Text text="Akazienstraße 1, 46049 Oberhausen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="25"/>
-        <Text text="Brunnenstraße 55, 44789 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="26"/>
-        <Text text="Schulstraße 4, 58332 Schwelm" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="27"/>
-        <Text text="Harkortstraße 29, 44807 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="28"/>
-        <Text text="Rathausplatz 2, 45127 Essen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="29"/>
-        <Text text="Wittener Straße 310, 44149 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="30"/>
-        <Text text="Bebelstraße 13, 45964 Gladbeck" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<!-- 31–40 -->
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="31"/>
-        <Text text="Lindenweg 6, 44892 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="32"/>
-        <Text text="Ulmenstraße 71, 45897 Gelsenkirchen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="33"/>
-        <Text text="Holzstraße 19, 58095 Hagen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="34"/>
-        <Text text="Poststraße 88, 44791 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="35"/>
-        <Text text="Wiesenweg 2, 59065 Hamm" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="36"/>
-        <Text text="Bismarckstraße 17, 46145 Oberhausen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="37"/>
-        <Text text="Rosenweg 4, 59439 Holzwickede" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="38"/>
-        <Text text="Gerhart-Hauptmann-Str. 10, 45657 Recklinghausen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="39"/>
-        <Text text="Schillerstraße 28, 44147 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="40"/>
-        <Text text="Bahnhofstraße 50, 44866 Bochum-Wattenscheid" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<!-- 41–50 -->
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="41"/>
-        <Text text="Theodor-Heuss-Str. 3, 45128 Essen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="42"/>
-        <Text text="Marktallee 22, 48291 Telgte" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="43"/>
-        <Text text="Erlenweg 5, 59394 Nordkirchen" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="44"/>
-        <Text text="Hügelstraße 7, 58455 Witten" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="45"/>
-        <Text text="Schultenweg 31, 45711 Datteln" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="46"/>
-        <Text text="Schumannstraße 40, 59063 Hamm" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="47"/>
-        <Text text="Blumenstraße 9, 44803 Bochum" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="48"/>
-        <Text text="Dahlhauser Straße 18, 44625 Herne" />
-        <CheckBox />
- </cells> <!-- End of cells for the ColumnListItem -->
- </ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="49"/>
-        <Text text="Kampstraße 101, 44137 Dortmund" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-<ColumnListItem vAlign="Middle">
-    <cells>
-        <Text text="50"/>
-        <Text text="Eickeler Straße 12, 44651 Herne" />
-        <CheckBox />
-    </cells>
-</ColumnListItem>
-
-            </items>
-        </Table>
-        <f:GridContainer id="dashboardGrid" snapToRow="true" class="sapUiMediumMargin">
-            <f:layout>
-                <f:GridContainerSettings rowSize="80px" columnSize="5rem" gap="1rem" />
-            </f:layout>
-
-            <f:Card>
-                <f:layoutData>
-                    <f:GridContainerItemLayoutData rows="5" columns="5" />
-                </f:layoutData>
-                <f:header>
-                    <card:Header title="Nachhaltigkeits-Impact" subtitle="Echtzeit CO₂-Reduktion" iconSrc="sap-icon://world" />
-                </f:header>
+    <f:DynamicPage id="dynamicPage" headerExpanded="true" toggleHeaderOnTitleClick="true" preserveHeaderStateOnScroll="false" fitContent="true">
+        
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="GreenTrack Executive Hub" />
+                </f:heading>
+                <f:expandedContent>
+                    <Label text="Zentrale Bestell- &amp; Flottenverwaltung" />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="GreenTrack Dashboard" />
+                </f:snappedContent>
                 <f:content>
-                    <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" justifyContent="SpaceBetween">
-                        <HBox justifyContent="SpaceBetween" alignItems="Start">
-                            <VBox>
-                                <Title text="Gesamteinsparung" level="H5" class="sapUiTinyMarginBottom"/>
-                                <ObjectNumber 
-                                    number="3.450" 
-                                    unit="kg" 
-                                    state="Success"
-                                    class="sapMObjectNumberLarge"
-                                    emphasized="true" />
-                                <ObjectStatus text="+12% vs. Vormonat" state="Success" icon="sap-icon://trend-up" class="sapUiTinyMarginTop"/>
-                            </VBox>
-                            <mc:RadialMicroChart size="M" percentage="78" valueColor="Good" class="sapUiTinyMarginTop"/>
-                        </HBox>
+                    <OverflowToolbar>
+                        <GenericTag text="Auftragslage" status="Warning" design="StatusIconHidden">
+                            <ObjectNumber number="50 Offen" state="Warning" />
+                        </GenericTag>
+                    </OverflowToolbar>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
 
-                        <VBox class="sapUiMediumMarginTop">
-                            <HBox justifyContent="SpaceBetween">
-                                <Label text="Jahresziel (5t)" design="Bold"/>
-                                <Label text="78% Erreicht" design="Bold" class="sapUiTinyMarginBottom"/>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <layout:HorizontalLayout allowWrapping="true">
+                    <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                        <ObjectAttribute title="Offene Bestellungen" text="50 Stück"/>
+                        <ObjectStatus text="Hohes Volumen" state="Warning" icon="sap-icon://inbox"/>
+                    </layout:VerticalLayout>
+
+                    <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                        <ObjectAttribute title="Verfügbare Fahrer" text="8 Frei"/>
+                        <ObjectStatus text="Einsatzbereit" state="Success" icon="sap-icon://shipping-status"/>
+                    </layout:VerticalLayout>
+
+                    <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                        <ObjectAttribute title="Gebiet" text="Ruhrgebiet"/>
+                        <ObjectStatus text="Verkehrsfluss: Normal" state="Success" />
+                    </layout:VerticalLayout>
+                </layout:HorizontalLayout>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <f:GridContainer id="dashboardGrid" snapToRow="true" class="sapUiSmallMargin">
+                <f:layout>
+                    <f:GridContainerSettings rowSize="80px" columnSize="4rem" gap="1rem" />
+                </f:layout>
+
+                <f:Card>
+                    <f:layoutData>
+                        <f:GridContainerItemLayoutData rows="5" columns="5" />
+                    </f:layoutData>
+                    <f:header>
+                        <card:Header title="Nachhaltigkeits-Impact" subtitle="Echtzeit CO₂-Reduktion" iconSrc="sap-icon://world" />
+                    </f:header>
+                    <f:content>
+                        <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" justifyContent="SpaceBetween">
+                            <HBox justifyContent="SpaceBetween" alignItems="Start">
+                                <VBox>
+                                    <Title text="Gesamteinsparung" level="H5" class="sapUiTinyMarginBottom"/>
+                                    <ObjectNumber number="3.450" unit="kg" state="Success" class="sapMObjectNumberLarge" emphasized="true" />
+                                    <ObjectStatus text="+12% vs. Vormonat" state="Success" icon="sap-icon://trend-up" class="sapUiTinyMarginTop"/>
+                                </VBox>
+                                <mc:RadialMicroChart size="M" percentage="78" valueColor="Good" class="sapUiTinyMarginTop"/>
                             </HBox>
-                            <ProgressIndicator 
-                                percentValue="78" 
-                                state="Success" 
-                                displayValue="3.450 kg" 
-                                showValue="true" 
-                                height="1.5rem"/> </VBox>
-                    </VBox>
-                </f:content>
-            </f:Card>
+                            <ProgressIndicator percentValue="78" state="Success" displayValue="Ziel: 5t" showValue="true" height="1rem" class="sapUiSmallMarginTop"/> 
+                        </VBox>
+                    </f:content>
+                </f:Card>
 
-            <f:Card>
-                <f:layoutData>
-                    <f:GridContainerItemLayoutData rows="5" columns="3" />
-                </f:layoutData>
-                <f:header>
-                    <card:Header title="Flotten-Status" subtitle="Verfügbarkeit" iconSrc="sap-icon://shipping-status" />
-                </f:header>
-                <f:content>
-                    <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" alignItems="Center" justifyContent="Center">
-                        <core:Icon src="sap-icon://shipping-status" size="3.5rem" color="#1C4C98" class="sapUiMediumMarginBottom"/>
-                        <Title text="35 / 45" titleStyle="H1" class="sapUiTinyMarginBottom"/>
-                        <Label text="Fahrzeuge im Einsatz" class="sapUiTinyMarginBottom"/>
-                        <ObjectStatus 
-                            text="Hohe Auslastung" 
-                            state="Indication06" 
-                            inverted="true" 
-                            class="sapUiMediumMarginTop" />
-                    </VBox>
-                </f:content>
-            </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <f:GridContainerItemLayoutData rows="5" columns="3" />
+                    </f:layoutData>
+                    <f:header>
+                        <card:Header title="Flotten-Status" subtitle="Verfügbarkeit" iconSrc="sap-icon://shipping-status" />
+                    </f:header>
+                    <f:content>
+                        <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" alignItems="Center" justifyContent="Center">
+                            <core:Icon src="sap-icon://shipping-status" size="3rem" color="#1C4C98" class="sapUiSmallMarginBottom"/>
+                            <Title text="35 / 45" titleStyle="H1"/>
+                            <Label text="Fahrzeuge im Einsatz"/>
+                            <ObjectStatus text="Hohe Auslastung" state="Indication06" inverted="true" class="sapUiTinyMarginTop" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
 
-            <f:Card>
-                <f:layoutData>
-                    <f:GridContainerItemLayoutData rows="5" columns="4" />
-                </f:layoutData>
-                <f:header>
-                    <card:Header title="Energiemix" subtitle="Antriebsarten" iconSrc="sap-icon://energy-saving-lightbulb"/>
-                </f:header>
-                <f:content>
-                    <FlexBox height="100%" width="100%" alignItems="Center" justifyContent="Center" class="sapUiSmallMarginBottom">
-                        <mc:InteractiveDonutChart selectionEnabled="true">
-                            <mc:segments>
-                                <mc:InteractiveDonutChartSegment label="Elektro" value="55.0" displayedValue="55%" color="Good"/>
-                                <mc:InteractiveDonutChartSegment label="Diesel" value="25.0" displayedValue="25%" color="Error"/>
-                                <mc:InteractiveDonutChartSegment label="H2" value="20.0" displayedValue="20%" color="Critical"/>
-                            </mc:segments>
-                        </mc:InteractiveDonutChart>
-                    </FlexBox>
-                </f:content>
-            </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <f:GridContainerItemLayoutData rows="5" columns="4" />
+                    </f:layoutData>
+                    <f:header>
+                        <card:Header title="Energiemix" subtitle="Antriebsarten" iconSrc="sap-icon://energy-saving-lightbulb"/>
+                    </f:header>
+                    <f:content>
+                        <FlexBox height="100%" width="100%" alignItems="Center" justifyContent="Center">
+                            <mc:InteractiveDonutChart selectionEnabled="true">
+                                <mc:segments>
+                                    <mc:InteractiveDonutChartSegment label="Elektro" value="55.0" displayedValue="55%" color="Good"/>
+                                    <mc:InteractiveDonutChartSegment label="Diesel" value="25.0" displayedValue="25%" color="Error"/>
+                                    <mc:InteractiveDonutChartSegment label="H2" value="20.0" displayedValue="20%" color="Critical"/>
+                                </mc:segments>
+                            </mc:InteractiveDonutChart>
+                        </FlexBox>
+                    </f:content>
+                </f:Card>
 
-            <f:Card>
-                <f:layoutData>
-                    <f:GridContainerItemLayoutData rows="8" columns="12" />
-                </f:layoutData>
-                <f:header>
-                    <card:Header title="Live-Tracking &amp; Performance" subtitle="Aktive Fahrer im Feld" iconSrc="sap-icon://group" />
-                </f:header>
-                <f:content>
-                    <Table 
-                        inset="false" 
-                        sticky="ColumnHeaders"
-                        growing="true" 
-                        class="sapUiContentPadding">
-                        <columns>
-                            <Column width="4rem" hAlign="Center"><Text text="" /></Column>
-                            <Column width="20%"><Text text="Fahrer" /></Column>
-                            <Column width="25%" minScreenWidth="Tablet" demandPopin="true"><Text text="Aktuelle Mission" /></Column>
-                            <Column width="15%" hAlign="Center"><Text text="Fahrzeug" /></Column>
-                            <Column width="20%" hAlign="Center"><Text text="Effizienz-Score" /></Column>
-                            <Column width="15%" hAlign="End"><Text text="Status" /></Column>
-                        </columns>
-                        <items>
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="TM" displaySize="XS" backgroundColor="Accent1" />
-                                    <ObjectIdentifier title="Müller, Thomas" text="ID: 8821" />
-                                    <Text text="Berlin Mitte -> Alexanderplatz" />
-                                    <ObjectStatus text="E-Van" state="Success" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="95" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="92" color="Good"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Pünktlich" state="Success" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
-                            
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="SL" displaySize="XS" backgroundColor="Accent2" />
-                                    <ObjectIdentifier title="Schmidt, Laura" text="ID: 9942" />
-                                    <Text text="Potsdam -> Werder (Havel)" />
-                                    <ObjectStatus text="Lastenrad" state="Success" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="80" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="85" color="Good"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Verzögert" state="Warning" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
+                <f:Card>
+                    <f:layoutData>
+                        <f:GridContainerItemLayoutData rows="6" columns="12" />
+                    </f:layoutData>
+                    <f:header>
+                        <card:Header title="Fahrer Live-Tracking" subtitle="Aktive Fahrer im Feld" iconSrc="sap-icon://group" />
+                    </f:header>
+                    <f:content>
+                        <Table inset="false" sticky="ColumnHeaders" growing="true" class="sapUiContentPadding">
+                            <columns>
+                                <Column width="4rem" hAlign="Center"><Text text="" /></Column>
+                                <Column width="20%"><Text text="Fahrer" /></Column>
+                                <Column width="30%"><Text text="Mission" /></Column>
+                                <Column width="15%" hAlign="Center"><Text text="Score" /></Column>
+                                <Column width="15%" hAlign="End"><Text text="Status" /></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem vAlign="Middle">
+                                    <cells>
+                                        <Avatar initials="TM" displaySize="XS" backgroundColor="Accent1" />
+                                        <ObjectIdentifier title="Müller, T." text="ID: 8821" />
+                                        <Text text="Berlin -> Alexanderplatz" />
+                                        <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="95" showValue="false">
+                                            <mc:actual><mc:BulletMicroChartData value="92" color="Good"/></mc:actual>
+                                        </mc:BulletMicroChart>
+                                        <ObjectStatus text="Pünktlich" state="Success" inverted="true" />
+                                    </cells>
+                                </ColumnListItem>
+                                <ColumnListItem vAlign="Middle">
+                                    <cells>
+                                        <Avatar initials="SL" displaySize="XS" backgroundColor="Accent2" />
+                                        <ObjectIdentifier title="Schmidt, L." text="ID: 9942" />
+                                        <Text text="Potsdam -> Werder" />
+                                        <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="80" showValue="false">
+                                            <mc:actual><mc:BulletMicroChartData value="85" color="Good"/></mc:actual>
+                                        </mc:BulletMicroChart>
+                                        <ObjectStatus text="Verzögert" state="Warning" inverted="true" />
+                                    </cells>
+                                </ColumnListItem>
+                                </items>
+                        </Table>
+                    </f:content>
+                </f:Card>
 
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="WJ" displaySize="XS" backgroundColor="Accent3" />
-                                    <ObjectIdentifier title="Weber, Jan" text="ID: 1102" />
-                                    <Text text="Spandau -> Logistikzentrum" />
-                                    <ObjectStatus text="Diesel Transporter" state="Error" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="50" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="45" color="Error"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Lädt" state="Information" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
-
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="FE" displaySize="XS" backgroundColor="Accent8" />
-                                    <ObjectIdentifier title="Fischer, Emma" text="ID: 4401" />
-                                    <Text text="Flughafen BER -> City" />
-                                    <ObjectStatus text="H2-LKW" state="Indication08" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="90" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="88" color="Good"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Unterwegs" state="None" inverted="false" />
-                                </cells>
-                            </ColumnListItem>
-
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="WS" displaySize="XS" backgroundColor="Accent4" />
-                                    <ObjectIdentifier title="Wagner, Sofia" text="ID: 7321" />
-                                    <Text text="Hamburg Hafen -> Speicherstadt" />
-                                    <ObjectStatus text="E-Van" state="Success" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="98" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="96" color="Good"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Verfrüht" state="Success" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
-
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="KB" displaySize="XS" backgroundColor="Accent5" />
-                                    <ObjectIdentifier title="Becker, Karl" text="ID: 2199" />
-                                    <Text text="München Zentrum -> Sendling" />
-                                    <ObjectStatus text="Diesel LKW" state="Error" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="60" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="55" color="Critical"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Stau" state="Error" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
-
-                            <ColumnListItem vAlign="Middle" type="Active">
-                                <cells>
-                                    <Avatar initials="MK" displaySize="XS" backgroundColor="Accent6" />
-                                    <ObjectIdentifier title="Klein, Max" text="ID: 5602" />
-                                    <Text text="Köln Hbf -> Messe" />
-                                    <ObjectStatus text="E-Bike" state="Success" inverted="true"/>
-                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="92" showValue="true">
-                                        <mc:actual>
-                                            <mc:BulletMicroChartData value="90" color="Good"/>
-                                        </mc:actual>
-                                    </mc:BulletMicroChart>
-                                    <ObjectStatus text="Pause" state="Information" inverted="true" />
-                                </cells>
-                            </ColumnListItem>
-
-                        </items>
-                    </Table>
-                </f:content>
-            </f:Card>
-
-        </f:GridContainer>
-    </Page>
+                <f:Card>
+                    <f:layoutData>
+                        <f:GridContainerItemLayoutData rows="12" columns="12" />
+                    </f:layoutData>
+                    <f:header>
+                        <card:Header title="Alle Bestellungen" subtitle="Liste aller offenen Aufträge" iconSrc="sap-icon://sales-order-item">
+                            <card:toolbar>
+                                <OverflowToolbar>
+                                    <ToolbarSpacer/>
+                                    <SearchField width="200px" placeholder="Adresse suchen..." />
+                                </OverflowToolbar>
+                            </card:toolbar>
+                        </card:Header>
+                    </f:header>
+                    <f:content>
+                        <ScrollContainer height="100%" vertical="true">
+                            <Table id="Bestellungen" inset="false" sticky="ColumnHeaders" growing="true" growingThreshold="20" growingScrollToLoad="true">
+                                <columns>
+                                    <Column width="5rem" hAlign="Center"><Text text="Nr." /></Column>
+                                    <Column><Text text="Adresse / Zielort" /></Column>
+                                    <Column width="5rem" hAlign="Center"><Text text="Erledigt" /></Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="1"/><Text text="Industriestraße 12, 44801 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="2"/><Text text="Westring 303, 44629 Herne" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="3"/><Text text="Dortmunder Straße 88, 44575 Castrop-Rauxel" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="4"/><Text text="Alleestraße 19, 44793 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="5"/><Text text="Berliner Platz 5, 45127 Essen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="6"/><Text text="Heinrich-Hertz-Straße 4, 44227 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="7"/><Text text="Hauptstraße 22, 44787 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="8"/><Text text="Nordring 14, 45894 Gelsenkirchen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="9"/><Text text="Beethovenstraße 70, 44145 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="10"/><Text text="Kaiserstraße 130, 44135 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="11"/><Text text="Hofstraße 9, 45468 Mülheim an der Ruhr" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="12"/><Text text="Friedrichstraße 41, 58089 Hagen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="13"/><Text text="Bahnstraße 5, 46045 Oberhausen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="14"/><Text text="Ruhrstraße 11, 58452 Witten" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="15"/><Text text="Goethestraße 18, 59423 Unna" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="16"/><Text text="Hansemannstraße 3, 44579 Castrop-Rauxel" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="17"/><Text text="Paulstraße 20, 44623 Herne" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="18"/><Text text="Emscherstraße 33, 45886 Gelsenkirchen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="19"/><Text text="Bergstraße 25, 45663 Recklinghausen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="20"/><Text text="Marktstraße 44, 42551 Velbert" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="21"/><Text text="Platanenweg 7, 58762 Altena" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="22"/><Text text="Steinweg 9, 59379 Selm" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="23"/><Text text="Parkallee 12, 44225 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="24"/><Text text="Akazienstraße 1, 46049 Oberhausen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="25"/><Text text="Brunnenstraße 55, 44789 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="26"/><Text text="Schulstraße 4, 58332 Schwelm" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="27"/><Text text="Harkortstraße 29, 44807 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="28"/><Text text="Rathausplatz 2, 45127 Essen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="29"/><Text text="Wittener Straße 310, 44149 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="30"/><Text text="Bebelstraße 13, 45964 Gladbeck" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="31"/><Text text="Lindenweg 6, 44892 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="32"/><Text text="Ulmenstraße 71, 45897 Gelsenkirchen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="33"/><Text text="Holzstraße 19, 58095 Hagen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="34"/><Text text="Poststraße 88, 44791 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="35"/><Text text="Wiesenweg 2, 59065 Hamm" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="36"/><Text text="Bismarckstraße 17, 46145 Oberhausen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="37"/><Text text="Rosenweg 4, 59439 Holzwickede" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="38"/><Text text="Gerhart-Hauptmann-Str. 10, 45657 Recklinghausen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="39"/><Text text="Schillerstraße 28, 44147 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="40"/><Text text="Bahnhofstraße 50, 44866 Bochum-Wattenscheid" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="41"/><Text text="Theodor-Heuss-Str. 3, 45128 Essen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="42"/><Text text="Marktallee 22, 48291 Telgte" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="43"/><Text text="Erlenweg 5, 59394 Nordkirchen" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="44"/><Text text="Hügelstraße 7, 58455 Witten" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="45"/><Text text="Schultenweg 31, 45711 Datteln" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="46"/><Text text="Schumannstraße 40, 59063 Hamm" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="47"/><Text text="Blumenstraße 9, 44803 Bochum" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="48"/><Text text="Dahlhauser Straße 18, 44625 Herne" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="49"/><Text text="Kampstraße 101, 44137 Dortmund" /><CheckBox /></cells></ColumnListItem>
+                                    <ColumnListItem vAlign="Middle"><cells><ObjectIdentifier title="50"/><Text text="Eickeler Straße 12, 44651 Herne" /><CheckBox /></cells></ColumnListItem>
+                                </items>
+                            </Table>
+                        </ScrollContainer>
+                    </f:content>
+                </f:Card>
+            </f:GridContainer>
+        </f:content>
+    </f:DynamicPage>
 </mvc:View>

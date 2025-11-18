@@ -37,12 +37,10 @@
                     <tnt:NavigationListItem text="Logistik" icon="sap-icon://shipping-status" expanded="true">
                         <tnt:NavigationListItem text="Fahrzeuge" key="vehicles" press="onNavToFahrzeuge" />
                         <tnt:NavigationListItem text="Routenoptimierung" key="routes" press="onNavToRoutenoptimierung"/>
-                        <tnt:NavigationListItem text="Aufträge" key="orders" />
                     </tnt:NavigationListItem>
 
                     <tnt:NavigationListItem text="Verwaltung" icon="sap-icon://building">
                         <tnt:NavigationListItem text="Kontakte" key="contacts" press="onNavToKontakte" />
-                        <tnt:NavigationListItem text="Impressum" key="imprint" />
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
