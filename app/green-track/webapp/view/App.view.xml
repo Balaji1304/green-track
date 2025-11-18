@@ -15,7 +15,7 @@
 		selectedKey="subItem3">
 		<tnt:NavigationListItem text="Navigationleiste" key="rootItem1" icon="sap-icon://employee">
 			<tnt:NavigationListItem text="Go to Dashboard" press="onNavToDashboard" />
-			<tnt:NavigationListItem text="Fahrzeuge" />
+			<tnt:NavigationListItem text="Fahrzeuge" press="onNavToFahrzeuge" />
 			<tnt:NavigationListItem text="Routen optimierung" id="subItemThree" key="subItem3" />
 			<tnt:NavigationListItem text="Sub Item 4" />
 			<tnt:NavigationListItem text="Invisible Sub Item 5" visible="false" />

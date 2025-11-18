@@ -12,6 +12,11 @@ sap.ui.define([
         onNavToDashboard: function () {
             const oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("RouteDashboard"); // Ensure the route name matches the manifest
+        },
+
+        onNavToFahrzeuge: function () {
+            const oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteFahrzeuge"); // Ensure the route name matches the manifest
         }
     });
 });
