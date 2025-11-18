@@ -63,12 +63,9 @@
                 </f:header>
                 <f:content>
                     <VBox class="sapUiContentPadding sapUiSmallMargin" height="100%" alignItems="Center" justifyContent="Center">
-                        
                         <core:Icon src="sap-icon://shipping-status" size="3.5rem" color="#1C4C98" class="sapUiMediumMarginBottom"/>
-                        
                         <Title text="35 / 45" titleStyle="H1" class="sapUiTinyMarginBottom"/>
                         <Label text="Fahrzeuge im Einsatz" class="sapUiTinyMarginBottom"/>
-                        
                         <ObjectStatus 
                             text="Hohe Auslastung" 
                             state="Indication06" 
@@ -125,8 +122,8 @@
                                     <Avatar initials="TM" displaySize="XS" backgroundColor="Accent1" />
                                     <ObjectIdentifier title="Müller, Thomas" text="ID: 8821" />
                                     <Text text="Berlin Mitte -> Alexanderplatz" />
-                                    <ObjectStatus icon="sap-icon://electric-vehicle" state="Success" tooltip="E-Van"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="95" showValue="true">
+                                    <ObjectStatus text="E-Van" state="Success" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="95" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="92" color="Good"/>
                                         </mc:actual>
@@ -140,8 +137,8 @@
                                     <Avatar initials="SL" displaySize="XS" backgroundColor="Accent2" />
                                     <ObjectIdentifier title="Schmidt, Laura" text="ID: 9942" />
                                     <Text text="Potsdam -> Werder (Havel)" />
-                                    <ObjectStatus icon="sap-icon://fridge" state="Success" tooltip="Lastenrad"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="80" showValue="true">
+                                    <ObjectStatus text="Lastenrad" state="Success" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="80" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="85" color="Good"/>
                                         </mc:actual>
@@ -155,8 +152,8 @@
                                     <Avatar initials="WJ" displaySize="XS" backgroundColor="Accent3" />
                                     <ObjectIdentifier title="Weber, Jan" text="ID: 1102" />
                                     <Text text="Spandau -> Logistikzentrum" />
-                                    <ObjectStatus icon="sap-icon://cargo-train" state="Error" tooltip="Diesel"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="50" showValue="true">
+                                    <ObjectStatus text="Diesel Transporter" state="Error" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="50" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="45" color="Error"/>
                                         </mc:actual>
@@ -170,8 +167,8 @@
                                     <Avatar initials="FE" displaySize="XS" backgroundColor="Accent8" />
                                     <ObjectIdentifier title="Fischer, Emma" text="ID: 4401" />
                                     <Text text="Flughafen BER -> City" />
-                                    <ObjectStatus icon="sap-icon://energy-saving-lightbulb" state="Indication08" tooltip="Wasserstoff"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="90" showValue="true">
+                                    <ObjectStatus text="H2-LKW" state="Indication08" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="90" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="88" color="Good"/>
                                         </mc:actual>
@@ -185,8 +182,8 @@
                                     <Avatar initials="WS" displaySize="XS" backgroundColor="Accent4" />
                                     <ObjectIdentifier title="Wagner, Sofia" text="ID: 7321" />
                                     <Text text="Hamburg Hafen -> Speicherstadt" />
-                                    <ObjectStatus icon="sap-icon://electric-vehicle" state="Success" tooltip="E-Van"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="98" showValue="true">
+                                    <ObjectStatus text="E-Van" state="Success" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="98" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="96" color="Good"/>
                                         </mc:actual>
@@ -200,8 +197,8 @@
                                     <Avatar initials="KB" displaySize="XS" backgroundColor="Accent5" />
                                     <ObjectIdentifier title="Becker, Karl" text="ID: 2199" />
                                     <Text text="München Zentrum -> Sendling" />
-                                    <ObjectStatus icon="sap-icon://cargo-train" state="Error" tooltip="Diesel"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="60" showValue="true">
+                                    <ObjectStatus text="Diesel LKW" state="Error" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="60" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="55" color="Critical"/>
                                         </mc:actual>
@@ -215,8 +212,8 @@
                                     <Avatar initials="MK" displaySize="XS" backgroundColor="Accent6" />
                                     <ObjectIdentifier title="Klein, Max" text="ID: 5602" />
                                     <Text text="Köln Hbf -> Messe" />
-                                    <ObjectStatus icon="sap-icon://fridge" state="Success" tooltip="Lastenrad"/>
-                                    <mc:BulletMicroChart size="S" scale="%" targetValue="100" forecastValue="92" showValue="true">
+                                    <ObjectStatus text="E-Bike" state="Success" inverted="true"/>
+                                    <mc:BulletMicroChart size="S" scale="%" minValue="0" maxValue="100" targetValue="100" forecastValue="92" showValue="true">
                                         <mc:actual>
                                             <mc:BulletMicroChartData value="90" color="Good"/>
                                         </mc:actual>
