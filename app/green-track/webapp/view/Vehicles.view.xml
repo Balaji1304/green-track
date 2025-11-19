@@ -5,335 +5,132 @@
     xmlns:f="sap.f"
     xmlns:card="sap.f.cards">
 
-    <Page title="Vehicle Fleet Management">
+    <Page title="Fahrzeugflotten-Management">
         <headerContent>
-            <Button text="Go to GreenTrack" press="onNavToGreenTrack" />
+            <Button text="Zu GreenTrack" press="onNavToGreenTrack" />
         </headerContent>
 
         <subHeader>
             <Toolbar>
-                <SearchField id="searchField" placeholder="Search vehicles..." search="onSearch" width="100%"/>
+                <SearchField id="searchField" placeholder="Fahrzeuge suchen..." search="onSearch" width="100%"/>
                 <ToolbarSpacer />
-                <Button icon="sap-icon://filter" text="Filter" press="onFilterPress" />
+                <Button icon="sap-icon://filter" text="Filtern" press="onFilterPress" />
             </Toolbar>
         </subHeader>
 
         <FlexBox wrap="Wrap">
 
             <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-001 - Electric Van" subtitle="Battery Van" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin" >
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Electric Van" />
-                            <Text text="Tonnage: 3.5 t" />
-                            <Text text="Fuel Type: Electric" />
-                            <Text text="Emissions (Full): 0 kg CO₂" />
-                            <Text text="Certificates: 2" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
+                <f:header>
+                    <card:Header title="VH-001 - Elektro-Transporter" subtitle="Batterie-Transporter" />
+                </f:header>
+                <f:content>
+                    <List showSeparators="None" class="sapUiSmallMargin" >
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Title level="H3" text="Elektro-Transporter" />
+                                    <Text text="Nutzlast: 3.5 t" />
+                                    <Text text="Antrieb: Elektrisch" />
+                                    <Text text="Emissionen (Voll): 0 kg CO₂" />
+                                    <Text text="Zertifikate: 2" />
+                                </VBox>
+                                <ObjectStatus text="Aktiv" state="Success" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </f:content>
+            </f:Card>
 
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-002 - Diesel Truck" subtitle="12t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Diesel Truck" />
-                            <Text text="Tonnage: 12 t" />
-                            <Text text="Fuel Type: Combustion" />
-                            <Text text="Emissions (Full): 245 kg CO₂" />
-                            <Text text="Certificates: 4" />
-                        </VBox>
-                        <ObjectStatus text="Maintenance" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
+            <f:Card width="375px" class="sapUiSmallMargin">
+                <f:header>
+                    <card:Header title="VH-002 - Diesel-LKW" subtitle="12t LKW" />
+                </f:header>
+                <f:content>
+                    <List showSeparators="None" class="sapUiSmallMargin">
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Title level="H3" text="Diesel-LKW" />
+                                    <Text text="Nutzlast: 12 t" />
+                                    <Text text="Antrieb: Verbrenner" />
+                                    <Text text="Emissionen (Voll): 245 kg CO₂" />
+                                    <Text text="Zertifikate: 4" />
+                                </VBox>
+                                <ObjectStatus text="Wartung" state="Warning" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </f:content>
+            </f:Card>
 
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-004 - Hybrid Truck" subtitle="Hybrid 10t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Hybrid Truck" />
-                            <Text text="Tonnage: 10 t" />
-                            <Text text="Fuel Type: Hybrid" />
-                            <Text text="Emissions (Full): 140 kg CO₂" />
-                            <Text text="Certificates: 3" />
-                        </VBox>
-                        <ObjectStatus text="maintenance" state="Error" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-001 - Electric Van" subtitle="Battery Van" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin" >
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Electric Van" />
-                            <Text text="Tonnage: 3.5 t" />
-                            <Text text="Fuel Type: Electric" />
-                            <Text text="Emissions (Full): 0 kg CO₂" />
-                            <Text text="Certificates: 2" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
+            <f:Card width="375px" class="sapUiSmallMargin">
+                <f:header>
+                    <card:Header title="VH-004 - Hybrid-LKW" subtitle="Hybrid 10t LKW" />
+                </f:header>
+                <f:content>
+                    <List showSeparators="None" class="sapUiSmallMargin">
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Title level="H3" text="Hybrid-LKW" />
+                                    <Text text="Nutzlast: 10 t" />
+                                    <Text text="Antrieb: Hybrid" />
+                                    <Text text="Emissionen (Voll): 140 kg CO₂" />
+                                    <Text text="Zertifikate: 3" />
+                                </VBox>
+                                <ObjectStatus text="Inaktiv" state="Error" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </f:content>
+            </f:Card>
+            
+            <f:Card width="375px" class="sapUiSmallMargin">
+                <f:header>
+                    <card:Header title="VH-005 - Elektro-Transporter" subtitle="Leichttransport" />
+                </f:header>
+                <f:content>
+                    <List showSeparators="None" class="sapUiSmallMargin" >
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Title level="H3" text="Elektro-Transporter" />
+                                    <Text text="Nutzlast: 3.0 t" />
+                                    <Text text="Antrieb: Elektrisch" />
+                                    <Text text="Emissionen (Voll): 0 kg CO₂" />
+                                    <Text text="Zertifikate: 1" />
+                                </VBox>
+                                <ObjectStatus text="Aktiv" state="Success" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </f:content>
+            </f:Card>
 
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-002 - Diesel Truck" subtitle="12t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Diesel Truck" />
-                            <Text text="Tonnage: 12 t" />
-                            <Text text="Fuel Type: Combustion" />
-                            <Text text="Emissions (Full): 245 kg CO₂" />
-                            <Text text="Certificates: 4" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
+            <f:Card width="375px" class="sapUiSmallMargin">
+                <f:header>
+                    <card:Header title="VH-006 - Diesel-LKW" subtitle="Schwertransport" />
+                </f:header>
+                <f:content>
+                    <List showSeparators="None" class="sapUiSmallMargin">
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Title level="H3" text="Diesel-LKW" />
+                                    <Text text="Nutzlast: 15 t" />
+                                    <Text text="Antrieb: Verbrenner" />
+                                    <Text text="Emissionen (Voll): 300 kg CO₂" />
+                                    <Text text="Zertifikate: 5" />
+                                </VBox>
+                                <ObjectStatus text="Aktiv" state="Success" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </f:content>
+            </f:Card>
 
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-004 - Hybrid Truck" subtitle="Hybrid 10t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Hybrid Truck" />
-                            <Text text="Tonnage: 10 t" />
-                            <Text text="Fuel Type: Hybrid" />
-                            <Text text="Emissions (Full): 140 kg CO₂" />
-                            <Text text="Certificates: 3" />
-                        </VBox>
-                        <ObjectStatus text="maintenance" state="Error" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-001 - Electric Van" subtitle="Battery Van" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin" >
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Electric Van" />
-                            <Text text="Tonnage: 3.5 t" />
-                            <Text text="Fuel Type: Electric" />
-                            <Text text="Emissions (Full): 0 kg CO₂" />
-                            <Text text="Certificates: 2" />
-                        </VBox>
-                        <ObjectStatus text="Maintenance" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-002 - Diesel Truck" subtitle="12t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Diesel Truck" />
-                            <Text text="Tonnage: 12 t" />
-                            <Text text="Fuel Type: Combustion" />
-                            <Text text="Emissions (Full): 245 kg CO₂" />
-                            <Text text="Certificates: 4" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-004 - Hybrid Truck" subtitle="Hybrid 10t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Hybrid Truck" />
-                            <Text text="Tonnage: 10 t" />
-                            <Text text="Fuel Type: Hybrid" />
-                            <Text text="Emissions (Full): 140 kg CO₂" />
-                            <Text text="Certificates: 3" />
-                        </VBox>
-                        <ObjectStatus text="maintenance" state="Error" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-001 - Electric Van" subtitle="Battery Van" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin" >
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Electric Van" />
-                            <Text text="Tonnage: 3.5 t" />
-                            <Text text="Fuel Type: Electric" />
-                            <Text text="Emissions (Full): 0 kg CO₂" />
-                            <Text text="Certificates: 2" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-002 - Diesel Truck" subtitle="12t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Diesel Truck" />
-                            <Text text="Tonnage: 12 t" />
-                            <Text text="Fuel Type: Combustion" />
-                            <Text text="Emissions (Full): 245 kg CO₂" />
-                            <Text text="Certificates: 4" />
-                        </VBox>
-                        <ObjectStatus text="active" state="Success" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-
-    <f:Card width="375px" class="sapUiSmallMargin">
-        <f:header>
-            <card:Header title="VH-004 - Hybrid Truck" subtitle="Hybrid 10t Truck" />
-        </f:header>
-        <f:content>
-            <List showSeparators="None" class="sapUiSmallMargin">
-                <CustomListItem>
-                    <HBox alignItems="Center" justifyContent="SpaceBetween">
-                        <VBox>
-                            <Title level="H3" text="Hybrid Truck" />
-                            <Text text="Tonnage: 10 t" />
-                            <Text text="Fuel Type: Hybrid" />
-                            <Text text="Emissions (Full): 140 kg CO₂" />
-                            <Text text="Certificates: 3" />
-                        </VBox>
-                        <ObjectStatus text="Active" state="Error" />
-                    </HBox>
-                </CustomListItem>
-            </List>
-        </f:content>
-    </f:Card>
-
-    </FlexBox>
+        </FlexBox>
 
     </Page>
 </mvc:View>
-
-<!-- <mvc:View
-    controllerName="greentrack.controller.Vehicles"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    xmlns:f="sap.f"
-    xmlns:card="sap.f.cards"
-    xmlns:core="sap.ui.core">
-    
-    <Page title="Vehicle Fleet Management" class="sapUiResponsiveContentPadding">
-        <headerContent>
-            <Button text="Go to GreenTrack" press="onNavToGreenTrack" />
-        </headerContent>
-        
-        <subHeader>
-            <Toolbar>
-                <SearchField id="searchField" placeholder="Search vehicles..." search="onSearch" width="100%"/>
-                <ToolbarSpacer />
-                <Button icon="sap-icon://filter" text="Filter" press="onFilterPress" />
-            </Toolbar>
-        </subHeader>
-        
-        <content>
-            <f:GridList
-                id="vehicleGridList"
-                items="{/Vehicles}"
-                mode="None"
-                class="sapUiSmallMargin">
-                <f:items>
-                    <f:Card class="sapUiTinyMargin">
-                        <f:header>
-                            <card:Header
-                                title="{licensePlate} - {vehicleType/name}"
-                                subtitle="{vehicleType/description}" />
-                            <ObjectStatus 
-                                text="{status}"
-                                state="{= ${status} === 'Active' ? 'Success' : (${status} === 'Idle' ? 'Warning' : 'Error') }" />
-                        </f:header>
-                        <f:content>
-                            <VBox>
-                                <Text text="Tonnage: {maxCapacityWeight} kg" />
-                                <Text text="Emissions (Full): {co2EmissionsFull} kg CO₂" />
-                                <Text text="Emissions (Empty): {co2EmissionsEmpty} kg CO₂" />
-                                <Text text="Certificates: {certCount}" />
-                            </VBox>
-                        </f:content>
-                    </f:Card>
-                </f:items>
-            </f:GridList>
-        </content>
-    </Page>
-</mvc:View> -->

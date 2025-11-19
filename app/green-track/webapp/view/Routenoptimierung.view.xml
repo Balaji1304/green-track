@@ -32,13 +32,16 @@
                                 <VBox>
                                     <Label text="Aufträge wählen" design="Bold" class="sapUiTinyMarginBottom"/>
                                     <MultiComboBox 
+                                        id="ordersComboBox"
                                         placeholder="Aufträge selektieren..." 
                                         width="100%"
-                                        selectionFinish="onOrdersSelected">
+                                        selectionChange="onOrdersSelected">
                                         <core:Item key="O1" text="Auftrag #4020 - Innenstadt (5kg)"/>
                                         <core:Item key="O2" text="Auftrag #4021 - Fußgängerzone (12kg)"/>
                                         <core:Item key="O3" text="Auftrag #4055 - Industriegebiet (800kg)"/>
                                         <core:Item key="O4" text="Auftrag #4090 - Vorstadt (Express)"/>
+                                        <core:Item key="O5" text="Auftrag #4102 - Hafen (Gefahrgut)"/>
+                                        <core:Item key="O6" text="Auftrag #4115 - Messegelände (Sperrgut)"/>
                                     </MultiComboBox>
                                 </VBox>
 
@@ -59,7 +62,7 @@
 
                 <layout:Grid defaultSpan="L6 M6 S12" hSpacing="2" vSpacing="2">
 
-                    <f:Card height="auto">
+                    <f:Card height="auto" visible="{view>/results/optionA/visible}">
                         <f:header>
                             <card:Header 
                                 title="Option A: Sammel-Tour" 
@@ -83,12 +86,12 @@
                                             <core:Icon src="sap-icon://shipping-status" class="sapUiMediumMarginEnd" size="1.5rem"/>
                                             <VBox>
                                                 <Title text="Diesel 7.5t LKW" level="H5"/>
-                                                <Label text="Fährt in Innenstadt &amp; Industriegebiet" size="Small"/>
+                                                <Label text="Fährt in alle Zonen (inkl. Umweltzone)" size="Small"/>
                                             </VBox>
                                         </HBox>
                                     </CustomListItem>
                                     <CustomListItem>
-                                        <MessageStrip text="LKW muss in Umweltzone einfahren (Hohe Gebühren)." type="Warning" showIcon="true" class="sapUiSmallMarginTop"/>
+                                        <MessageStrip text="Hohe CO₂-Belastung durch Stop-and-Go." type="Warning" showIcon="true" class="sapUiSmallMarginTop"/>
                                     </CustomListItem>
                                 </List>
                                 
@@ -96,6 +99,10 @@
                                     <HBox justifyContent="SpaceBetween">
                                         <Label text="CO₂-Ausstoß" />
                                         <Text text="{view>/results/optionA/co2}" state="{view>/results/optionA/co2State}"/>
+                                    </HBox>
+                                     <HBox justifyContent="SpaceBetween">
+                                        <Label text="Distanz" />
+                                        <Text text="{view>/results/optionA/distance}" />
                                     </HBox>
                                 </VBox>
 
@@ -138,13 +145,10 @@
                                                 <core:Icon src="sap-icon://bicycle" class="sapUiMediumMarginEnd" color="#2B7D2B" size="1.5rem"/>
                                                 <VBox>
                                                     <Title text="E-Cargo Bike" level="H6"/>
-                                                    <Label text="Innenstadt-Route" size="Small"/>
+                                                    <Label text="City-Logistik (Emissionsfrei)" size="Small"/>
                                                 </VBox>
                                             </HBox>
-                                            <VBox alignItems="End">
-                                                <ObjectStatus text="Auftrag #4020" state="Success" icon="sap-icon://accept"/>
-                                                <ObjectStatus text="Auftrag #4021" state="Success" icon="sap-icon://accept"/>
-                                            </VBox>
+                                            <ObjectStatus text="Innenstadt" state="Success" icon="sap-icon://accept"/>
                                         </HBox>
                                     </CustomListItem>
                                     
@@ -154,12 +158,10 @@
                                                 <core:Icon src="sap-icon://cargo-train" class="sapUiMediumMarginEnd" color="#0050b3" size="1.5rem"/>
                                                 <VBox>
                                                     <Title text="E-Transporter" level="H6"/>
-                                                    <Label text="Außenbezirk" size="Small"/>
+                                                    <Label text="Schwere Lasten / Außenbezirk" size="Small"/>
                                                 </VBox>
                                             </HBox>
-                                            <VBox alignItems="End">
-                                                <ObjectStatus text="Auftrag #4055" state="Information" icon="sap-icon://accept"/>
-                                            </VBox>
+                                            <ObjectStatus text="Industrie" state="Information" icon="sap-icon://accept"/>
                                         </HBox>
                                     </CustomListItem>
 
