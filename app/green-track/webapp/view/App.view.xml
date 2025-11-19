@@ -19,7 +19,7 @@
                 </Title>
                 <ToolbarSpacer />
                 <Button icon="sap-icon://search" type="Transparent" tooltip="Suche" />
-                <Button icon="sap-icon://bell" type="Transparent" tooltip="Benachrichtigungen">
+                <Button icon="sap-icon://bell" type="Transparent" tooltip="Benachrichtigungen" press="onNotificationPress" id="notificationButton">
                     <customData>
                         <BadgeCustomData key="badge" value="3" visible="true"/>
                     </customData>
@@ -111,6 +111,70 @@
                                 </items>
                             </Table>
                         </Panel>
+
+                        <!-- Popover for Notifications -->
+                        <Popover id="notificationPopover" title="Orders" placement="Bottom" style="max-width: 300px;">
+                            <VBox>
+                                <NotificationList>
+                                    <layoutData>
+                                        <FlexItemData maxWidth="300px" />
+                                    </layoutData>
+                                    <NotificationListGroup
+                                        title="Orders"
+                                        showCloseButton="true"
+                                        close=".onItemClose">
+                                        <buttons>
+                                            <Button text="Accept All" press=".onAcceptPress" />
+                                        </buttons>
+
+                                       <NotificationListItem
+                                            title="Neue Bestellung (#2525)"
+                                            description="Eine neue Transportbestellung wurde erstellt. Bitte prüfen Sie die Details und bestätigen Sie die Route oder weisen Sie einem Fahrer zu."
+                                            showCloseButton="true"
+                                            datetime="vor 1 Stunde"
+                                            unread="true"
+                                            priority="None"
+                                            close=".onItemClose"
+                                            press=".onListItemPress"
+                                            authorPicture="sap-icon://car-rental"
+                                            authorAvatarColor="Accent8" />
+
+                                        <NotificationListItem
+                                            title="Neue Bestellung (#2524)"
+                                            description="Ein Kunde hat eine neue Bestellung aufgegeben. Überprüfen Sie die Lieferadresse und weisen Sie das passende Fahrzeug zu."
+                                            showCloseButton="true"
+                                            datetime="vor 3 Tagen"
+                                            unread="true"
+                                            priority="High"
+                                            close=".onItemClose"
+                                            press=".onListItemPress"
+                                            authorInitials="SF"
+                                            authorAvatarColor="Random">
+                                            <buttons>
+                                                <Button text="Akzeptieren" press=".onAcceptPress" />
+                                                <Button text="Ablehnen" press=".onRejectPress" />
+                                            </buttons>
+                                        </NotificationListItem>
+
+                                        <NotificationListItem
+                                            title="Neue Bestellung (#2523)"
+                                            description="Die Lieferung wurde erfolgreich abgeschlossen. Bitte bestätigen Sie den Abschluss oder geben Sie Feedback."
+                                            showCloseButton="false"
+                                            unread="false"
+                                            datetime="vor 3 Tagen"
+                                            priority="High"
+                                            close=".onItemClose"
+                                            press=".onListItemPress"
+                                            authorInitials="YR"
+                                            authorAvatarColor="Accent7">
+                                            <buttons>
+                                                <Button text="Akzeptieren" press=".onAcceptPress" />
+                                                <Button text="Ablehnen" press=".onRejectPress" />
+                                            </buttons>
+                                        </NotificationListItem>
+
+                            </VBox>
+                        </Popover>
 
                     </content>
                 </Page>
